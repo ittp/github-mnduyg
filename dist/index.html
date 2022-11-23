@@ -13,12 +13,16 @@
     />
   </head>
   <body>
-    <header>Dev</header>
+    <header>Kyorcera</header>
 
+    <div>M2040</div>
+    <div>Ecosys</div>
+    <div>Ecosys</div>
+    <div>Ecosys</div>
+    <div>Ecosys</div>
+    <div>Ecosys</div>
     <table></table>
-    <textarea id="code">
-      test
-    </textarea>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
@@ -35,9 +39,9 @@
       let code = document.getElementById("code")
 
       console.log(code)
-
+      let token = process.env.API_TOKEN
       async() {
-        let c = await fetch("https://api.govtp.ru/api/classificators/").then(r => r.json() )
+        let c = await fetch("https://api.govtp.ru/api/classificators/", { heasers: { Authrorization: "Bearer " + token}}).then(r => r.json() )
 
         console.log(await c)
 
