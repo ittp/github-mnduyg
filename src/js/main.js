@@ -12,9 +12,5 @@ document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popover) => {
 });
 
 let DeviceCard = {
-
-
-  Printers: {
-    
-  }
+  Printers: {},
 };
